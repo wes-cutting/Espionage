@@ -3,7 +3,12 @@ package edu.neumont.csc380.service;
 import java.math.BigInteger;
 import java.util.Random;
 
-public class KeyGenImpl {
+import edu.neumont.csc380.espionage.model.MyKeyPair;
+import edu.neumont.csc380.espionage.model.MyPrivateKey;
+import edu.neumont.csc380.espionage.model.MyPublicKey;
+import edu.neumont.csc380.espionage.service.KeyGen;
+
+public class KeyGenImpl implements KeyGen{
 
 	public MyKeyPair getKeyPair(BigInteger prime1, BigInteger prime2){
 		BigInteger product = prime1.multiply(prime2);
